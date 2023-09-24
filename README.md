@@ -60,7 +60,7 @@ password: admin
 or using curl:
 
 ```
-curl -X POST -u admin:admin -F "uploaded_image=@path/to/test.jpg" http://127.0.0.1:8000/api/upload/
+curl -X POST -u admin:admin ...
 ```
 
 <h3>API Endpoints</h3>
@@ -68,7 +68,7 @@ curl -X POST -u admin:admin -F "uploaded_image=@path/to/test.jpg" http://127.0.0
 <h3>1. Upload image endpoint</h2>
 
 ```
-/api/upload/
+[POST] /api/upload/
 ```
 
 <h4>Request example:</h4>
@@ -103,7 +103,7 @@ curl -X POST -F "uploaded_image=@path/to/test.jpg" http://127.0.0.1:8000/api/upl
 <h3>2. List user's uploaded images endpoint</h2>
 
 ```
-/api/list/
+[GET] /api/list/
 ```
 
 <h4>Response example:</h4>
@@ -134,7 +134,7 @@ curl -X POST -F "uploaded_image=@path/to/test.jpg" http://127.0.0.1:8000/api/upl
 <h3>3. Fetch expiring link to the image</h3>
 
 ```
-/api/fetch-expiring-link/<int:image_id>/
+[GET] /api/get-expiring-link/<int:image_id>/
 ```
 
 <h4>Response example:</h4>
@@ -146,4 +146,5 @@ curl -X POST -F "uploaded_image=@path/to/test.jpg" http://127.0.0.1:8000/api/upl
 ```
 
 <h2>Admin Interface</h2>
+
 Navigate to http://localhost:8000/admin/ to access the Django admin interface. Use the credentials admin/admin for the default superuser.
