@@ -33,6 +33,13 @@ Navigate to the project directory:
 cd path/to/project
 ```
 
+Run:
+
+```
+python manage.py makemigrations
+python manage.py migrate
+```
+
 Build the docker-compose service:
 
 ```
