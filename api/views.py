@@ -42,8 +42,8 @@ class ListImagesView(generics.ListAPIView):
         return Image.objects.filter(owner=self.request.user)
 
 
-@api_view(['GET'])
-def get_expiring_link(request, image_id):
+@api_view(['POST'])
+def fetch_expiring_link(request, image_id):
     default_expiration = 300
     max_expiration = 30000
 
